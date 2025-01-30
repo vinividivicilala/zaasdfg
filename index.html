@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sertifikat - Farid Ardiiansyah</title>
+   
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #000000;
+            color: #333;
+        }
+
+        .nav {
+            background-color: #000000;
+            color: #fff;
+            text-align: left;
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-top: 5%;
+            padding-bottom: 1%;
+        }
+
+        .nav h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+
+        .nav h3 {
+            font-size: 1.2em;
+        }
+
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 40px;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            cursor: pointer;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .gallery-item h4 {
+            padding: 10px;
+            color: white;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: smaller;
+            margin: 0;
+            background-color: rgba(0, 0, 0, 0.782);
+            border-radius: 0 0 8px 8px;
+            text-align: center;
+        }
+		.footer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer__inner > div {
+  width: 33.333%;
+}
+
+.footer-center {
+  text-align: center;
+}
+
+.footer-center a {
+  color: white;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.footer-right span {
+  position: relative;
+  top: -3px;
+}
+
+        /* Modal Styles */
+        /* Add your modal styles here if needed */
+
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <h1>Sertifikat</h1>
+        <h3><a href="" target="_blank" style="color: #cbcbcb; ">Instagram</a></h3>
+        <br/>
+		<h3><a href="" target="_blank" style="color: #cbcbcb; ">Hobi</a></h3>
+        <br/>
+		<h3><a href="" target="_blank" style="color: #cbcbcb; ">Portfolio</a></h3>
+        <br/>
+        <p>Sertifikat ini sebagai pembelajaran dalam hal ilmu </p>
+    </div>
+    
+    <div class="main">
+        <div class="gallery">
+            <div class="gallery-item">
+                <img data-src="./images/1.jpg" alt="Sertifikat minicomputer" onclick="openModal('./images/1.jpg')">
+                <h4>Sertifikat minicomputer</h4>
+            </div>
+            <div class="gallery-item">
+                <img data-src="./images/2.JPG" alt="Sertifikat" onclick="openModal('./images/2.JPG')">
+                <h4>Sertifikat</h4>
+            </div>
+            <div class="gallery-item">
+                <img data-src="./images/3.JPG" alt="Sertifikat" onclick="openModal('./images/3.JPG')">
+                <h4>Sertifikat</h4>
+            </div>
+            <div class="gallery-item">
+                <img data-src="./images/4.JPG" alt="Sertifikat" onclick="openModal('./images/4.JPG')">
+                <h4>Sertifikat</h4>
+            </div>
+            <div class="gallery-item">
+                <img data-src="./images/5.JPG" alt="Sertifikat" onclick="openModal('./images/5.JPG')">
+                <h4>Sertifikat</h4>
+            </div>
+            <div class="gallery-item">
+                <img data-src="./images/6.JPG" alt="Sertifikat" onclick="openModal('./images/6.JPG')">
+                <h4>Sertifikat</h4>
+            </div>
+            <div class="gallery-item">
+                <img data-src="./images/7.JPG" alt="Sertifikat" onclick="openModal('./images/7.JPG')">
+                <h4>Sertifikat</h4>
+            </div>
+            <div class="gallery-item">
+              <img data-src="./images/8.JPG" alt="Sertifikat" onclick="openModal('./images/8.JPG')">
+              <h4>Sertifikat</h4>
+          </div>
+            <div class="gallery-item">
+                <img data-src="./images/9.JPG" alt="Sertifikat" onclick="openModal('./images/9.JPG')">
+                <h4>Sertifikat</h4>
+            </div>
+            <div class="gallery-item">
+                <img data-src="./images/10.JPG" alt="Sertifikat" onclick="openModal('./images/10.JPG')">
+                <h4>Sertifikat </h4>
+            </div>
+            <div class="gallery-item">
+              <img data-src="./images/11.JPG" alt="Sertifikat" onclick="openModal('./images/11.JPG')">
+              <h4>Sertifikat</h4>
+          </div>
+		  
+		  
+<footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer-left">
+          <h3>Sertifikat Farid Ardiiansyah, Terima kasih ya</h3>
+        </div>
+  
+        <div class="footer-center">
+          <h3>
+            <a href="#">&nbsp;EMAIL,</a>
+            <a href="https://www.instagram.com/fardardinsyh/">&nbsp;INSTAGRAM,</a>
+            <a href="#">&nbsp;LINKEDIN,</a>
+          </h3>
+        </div>
+  
+        <div class="footer-right">
+          <h3>BACK TO TOP <span>↑</span></h3>
+        </div>
+      </div>
+    </div>
+  </footer>
+    <script>
+        function openModal(imageDirectory) {
+            // Open the image in a new tab
+            window.open(imageDirectory, '_blank');
+        }
+
+        // Lazy loading for images
+        document.addEventListener("DOMContentLoaded", function() {
+            var lazyImages = document.querySelectorAll("img[data-src]");
+            
+            lazyImages.forEach(function(img) {
+                img.setAttribute("src", img.getAttribute("data-src"));
+                img.onload = function() {
+                    img.removeAttribute("data-src");
+                };
+            });
+        });
+    </script>
+</body>
+</html>

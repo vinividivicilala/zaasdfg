@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography</title>
+   
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .nav {
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .nav h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .nav h3 {
+            margin: 5px 0;
+            font-size: 1.2em;
+        }
+
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            cursor: pointer;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .gallery-item h4 {
+            padding: 10px;
+            margin: 0;
+            background-color: #fff;
+            border-radius: 0 0 8px 8px;
+            text-align: center;
+        }
+
+        /* Modal Styles */
+        /* Add your modal styles here if needed */
+
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <h1>Photography</h1>
+        <h3><a href="https://olesturchyn.com" target="_blank" style="color: #fff; text-decoration: none;">Oles Turchyn</a></h3>
+        <br/>
+    </div>
+    
+    <div class="main">
+        <div class="gallery">
+            <div class="gallery-item">
+                <img data-src="./images/astro.jpg" alt="Algonquin Provincial Park, Ontario" onclick="openModal('./images/astro.jpg')">
+                <h4>Algonquin Provincial Park, Ontario</h4>
+            </div>
+            <div class="gallery-item">
+                <img data-src="./images/bridge.JPG" alt="Sky Pilot Suspension Bridge, British Columbia" onclick="openModal('./images/bridge.JPG')">
+                <h4>Sky Pilot Suspension Bridge, British Columbia</h4>
+            </div>
+            <div class="gallery-item">
+                <img data-src="./images/river.JPG" alt="Squamish, British Columbia" onclick="openModal('./images/river.JPG')">
+                <h4>Squamish, British Columbia</h4>
+            </div>
+            <div class="gallery-item">
+                <img data-src="./images/sail1.JPG" alt="Toronto, Ontario" onclick="openModal('./images/sail1.JPG')">
+                <h4>Toronto, Ontario</h4>
+            </div>
+            <div class="gallery-item">
+                <img data-src="./images/waterfall.JPG" alt="Shannon Falls, British Columbia" onclick="openModal('./images/waterfall.JPG')">
+                <h4>Shannon Falls, British Columbia</h4>
+            </div>
+            <div class="gallery-item">
+                <img data-src="./images/halifax1.JPG" alt="Lawrencetown, Nova Scotia" onclick="openModal('./images/halifax1.JPG')">
+                <h4>Lawrencetown, Nova Scotia</h4>
+            </div>
+            <div class="gallery-item">
+                <img data-src="./images/windowplane.JPG" alt="British Columbia" onclick="openModal('./images/windowplane.JPG')">
+                <h4>British Columbia</h4>
+            </div>
+            <div class="gallery-item">
+                <img data-src="./images/pacific.JPG" alt="Vancouver, British Columbia" onclick="openModal('./images/pacific.JPG')">
+                <h4>Vancouver, British Columbia</h4>
+            </div>
+            <div class="gallery-item">
+                <img data-src="./images/bird.JPG" alt="Bloedel Conservatory, British Columbia" onclick="openModal('./images/bird.JPG')">
+                <h4>Bloedel Conservatory, British Columbia</h4>
+            </div>
+            <div class="gallery-item">
+                <img data-src="./images/vancouverskyline.JPG" alt="Vancouver, British Columbia" onclick="openModal('./images/vancouverskyline.JPG')">
+                <h4>Vancouver, British Columbia</h4>
+            </div>
+            <div class="gallery-item">
+                <img data-src="./images/library.JPG" alt="Vancouver Library, British Columbia" onclick="openModal('./images/library.JPG')">
+                <h4>Vancouver Library, British Columbia</h4>
+            </div>
+            <div class="gallery-item">
+                <img data-src="./images/library2.JPG" alt="Vancouver Library, British Columbia" onclick="openModal('./images/library2.JPG')">
+                <h4>Vancouver Library, British Columbia</h4>
+            </div>
+            <div class="gallery-item">
+                <img data-src="./images/windsor1.JPG" alt="Windsor, Ontario" onclick="openModal('./images/windsor1.JPG')">
+                <h4>Windsor, Ontario</h4>
+            </div>
+            <div class="gallery-item">
+                <img data-src="./images/cherry.JPG" alt="Vancouver, British Columbia" onclick="openModal('./images/cherry.JPG')">
+                <h4>Vancouver, British Columbia</h4>
+            </div>
+            <div class="gallery-item">
+                <img data-src="./images/lighthouse.JPG" alt="Northern Vancouver" onclick="openModal('./images/lighthouse.JPG')">
+                <h4>Northern Vancouver</h4>
+            </div>
+            <div class="gallery-item">
+                <img data-src="./images/toronto1.JPG" alt="Toronto, Ontario" onclick="openModal('./images/toronto1.JPG')">
+                <h4>Toronto, Ontario</h4>
+            </div>
+            <div class="gallery-item">
+                <img data-src="./images/tennis.JPG" alt="Ottawa, Ontario" onclick="openModal('./images/tennis.JPG')">
+                <h4>Ottawa, Ontario</h4>
+            </div>
+            <div class="gallery-item">
+                <img data-src="./images/tennis2.JPG" alt="Manotick, Ontario" onclick="openModal('./images/tennis2.JPG')">
+                <h4>Manotick, Ontario</h4>
+            </div>
+            <div class="gallery-item">
+                <img data-src="./images/canada.JPG" alt="Algonquin Provincial Park, Ontario" onclick="openModal('./images/canada.JPG')">
+                <h4>Algonquin Provincial Park, Ontario</h4>
+            </div>
+            <div class="gallery-item">
+                <img data-src="./images/hikingboy.JPG" alt="Algonquin Provincial Park, Ontario" onclick="openModal('./images/hikingboy.JPG')">
+                <h4>Algonquin Provincial Park, Ontario</h4>
+            </div>
+            <div class="gallery-item">
+                <img data-src="./images/purple.JPG" alt="Belle River, Ontario" onclick="openModal('./images/purple.JPG')">
+                <h4>Belle River, Ontario</h4>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(imageDirectory) {
+            // Open the image in a new tab
+            window.open(imageDirectory, '_blank');
+        }
+
+        // Lazy loading for images
+        document.addEventListener("DOMContentLoaded", function() {
+            var lazyImages = document.querySelectorAll("img[data-src]");
+            
+            lazyImages.forEach(function(img) {
+                img.setAttribute("src", img.getAttribute("data-src"));
+                img.onload = function() {
+                    img.removeAttribute("data-src");
+                };
+            });
+        });
+    </script>
+</body>
+</html>
